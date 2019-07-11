@@ -12,6 +12,8 @@ export const ProductList = styled.ul`
     display: flex;
     flex-direction: column;
     background: #fff;
+    height: 450px;
+    width: 350px;
     border-radius: 5px;
     padding: 20px;
     margin: 15px 10px;
@@ -22,7 +24,7 @@ export const ProductList = styled.ul`
       align-self: center;
       max-width: 100%;
       transition: transform 0.2s;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       &:hover {
         transform: scale(1.15);
       }
