@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { MdAddShoppingCart } from 'react-icons/md';
+
 import * as CartActions from '../../store/modules/cart/actions';
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
@@ -9,6 +11,10 @@ import api from '../../services/api';
 import { ProductList } from './styles';
 
 class Home extends Component {
+  static propTypes = {
+    addToCart: PropTypes.func.isRequired,
+  };
+
   state = {
     products: [],
   };
@@ -49,7 +55,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  products: state.cart,
+  cart: state.cart,
 });
 
 const mapDispatchToProps = dispatch =>

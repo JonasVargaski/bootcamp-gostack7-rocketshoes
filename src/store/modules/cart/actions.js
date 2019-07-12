@@ -1,6 +1,13 @@
-export default function addToCart(product) {
+export function addToCart(product) {
   return {
-    type: 'ADD_TO_CART',
+    type: '@cart/ADD',
     product,
+  };
+}
+
+export function removeFromCart(id) {
+  return {
+    type: '@cart/REMOVE',
+    id,
   };
 }
