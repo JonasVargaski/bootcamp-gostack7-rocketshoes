@@ -1,33 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
-import { MdShoppingCart } from 'react-icons/md';
-import logo from '../../assets/img/rocketshoes.svg';
+import { MdShoppingBasket } from 'react-icons/md';
+
 import { Container, Cart } from './styles';
 
-function Header({ cartSize }) {
+import logo from '../../assets/images/logo.svg';
+
+export default function Header() {
+  const cartSize = useSelector(state => state.cart.length);
+
   return (
     <Container>
       <Link to="/">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="Rocketshoes" />
       </Link>
+
       <Cart to="/cart">
         <div>
-          <strong>Meu Carrinho</strong>
-          <span>{cartSize} items</span>
+          <strong>Meu carrinho</strong>
+          <span>{`${cartSize} itens`}</span>
         </div>
-        <MdShoppingCart size={36} color="#FFF" />
+
+        <MdShoppingBasket size={36} color="#fff" />
       </Cart>
     </Container>
   );
 }
-
-export default connect(state => ({
-  cartSize: state.cart.length,
-}))(Header);
-
-Header.propTypes = {
-  cartSize: PropTypes.number.isRequired,
-};

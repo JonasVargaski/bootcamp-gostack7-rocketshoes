@@ -5,31 +5,31 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 0px;
+  margin: 50px 0;
 `;
 
 export const Cart = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 
   &:hover {
-    opacity: 0.85;
+    opacity: 0.7;
   }
 
   div {
-    text-align: right;
     margin-right: 10px;
-  }
+    text-align: right;
 
-  strong {
-    display: block;
-    color: #fff;
-  }
+    strong {
+      display: block;
+      color: #fff;
+    }
 
-  span {
-    font-size: 12px;
-    color: #efefef;
+    span {
+      font-size: 12px;
+      color: #999;
+    }
   }
 `;

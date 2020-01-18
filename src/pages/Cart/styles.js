@@ -2,25 +2,26 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.div`
+  padding: 30px;
+  border-radius: 4px;
   background: #fff;
-  border-radius: 5px;
-  padding: 25px;
 
   footer {
-    margin-top: 30px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
 
     button {
-      background: #7159c1;
-      color: #fff;
+      padding: 12px 20px;
       border: 0;
       border-radius: 4px;
+      color: #fff;
+      background: #7159c1;
       font-weight: bold;
-      padding: 12px 20px;
       text-transform: uppercase;
       transition: background 0.2s;
+
       &:hover {
         background: ${darken(0.03, '#7159c1')};
       }
@@ -32,50 +33,49 @@ export const ProductTable = styled.table`
   width: 100%;
 
   thead th {
+    padding: 12px;
     color: #999;
     text-align: left;
-    padding: 12px;
   }
 
   tbody td {
     padding: 12px;
     border-bottom: 1px solid #eee;
+  }
 
-    img {
-      max-height: 120px;
-    }
+  img {
+    height: 100px;
+  }
 
-    strong {
-      color: #333;
-      display: block;
-    }
+  strong {
+    display: block;
+    color: #333;
+  }
 
-    span {
-      margin-top: 5px;
-      display: block;
-      font-weight: bold;
-      font-size: 18px;
-    }
+  span {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 
-    div {
-      display: flex;
-      align-items: center;
+  div {
+    display: flex;
+    align-items: center;
 
-      input {
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        color: #666;
-        padding: 6px;
-        width: 50px;
-      }
-    }
-
-    button {
-      background: none;
-      border: 0;
+    input {
+      width: 50px;
       padding: 6px;
-      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      color: #666;
     }
+  }
+
+  button {
+    padding: 6px;
+    border: 0;
+    background: none;
   }
 `;
 
@@ -87,8 +87,9 @@ export const Total = styled.div`
     color: #999;
     font-weight: bold;
   }
+
   strong {
-    font-size: 28px;
     margin-left: 5px;
+    font-size: 28px;
   }
 `;

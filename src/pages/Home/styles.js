@@ -1,57 +1,48 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-export const ProductList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+export const ProductList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   list-style: none;
 
   li {
     display: flex;
     flex-direction: column;
-    background: #fff;
-    height: 450px;
-    width: 350px;
-    border-radius: 5px;
     padding: 20px;
-    margin: 15px 10px;
-    max-width: 318px;
-    overflow: hidden;
+    border-radius: 4px;
+    background: #fff;
 
     img {
       align-self: center;
-      max-width: 100%;
-      transition: transform 0.2s;
-      margin-bottom: 18px;
-      &:hover {
-        transform: scale(1.15);
-      }
+      max-width: 250px;
     }
 
     > strong {
-      font-size: 16px;
+      margin-top: 5px;
       line-height: 20px;
       color: #333;
+      font-size: 13px;
     }
 
     > span {
+      margin: 5px 0 20px;
       font-size: 21px;
       font-weight: bold;
-      margin: 5px 0px 20px;
     }
 
     button {
-      background: #7159c1;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-top: auto;
       display: flex;
       align-items: center;
-      transition: all 0.2s;
+
+      overflow: hidden;
+      margin-top: auto;
+      border: 0;
+      border-radius: 4px;
+      color: #fff;
+      background: #7159c1;
+      transition: background 0.2s;
 
       &:hover {
         background: ${darken(0.03, '#7159c1')};
@@ -64,15 +55,14 @@ export const ProductList = styled.ul`
         background: rgba(0, 0, 0, 0.1);
 
         svg {
-          margin-right: 6px;
+          margin-right: 5px;
         }
       }
 
       span {
-        text-align: center;
         flex: 1;
         font-weight: bold;
-        text-transform: uppercase;
+        text-align: center;
       }
     }
   }
