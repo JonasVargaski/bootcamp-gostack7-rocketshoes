@@ -7,7 +7,7 @@
 yarn install
 
 # start the json-server api
-yarn api:server
+yarn server
 
 # start the app on a new terminal window
 yarn start
